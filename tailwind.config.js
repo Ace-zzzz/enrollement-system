@@ -7,10 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'darkGreen': '#406843',
-        'lightGreen': '#4D774E',
-        'lighterGreen': '#9DC88D',
-        'orangeYellow': '#F1B24A',
+        'green' : '#337F3A',
       }
     },
   },

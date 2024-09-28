@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
        Admin::factory()->create();
        Section::factory(3)->create();
        Teacher::factory(3)->create();
-       Student::factory(3)->create();
+       Student::factory(40)->create();
        Subject::factory(8)->create();
     }
 }

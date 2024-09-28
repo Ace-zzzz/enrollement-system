@@ -24,7 +24,7 @@ class StudentFactory extends Factory
             'first_name' => fake()->firstNameFemale(),
             'last_name'  => fake()->lastName('female'),
             'birthday'   => fake()->date(),
-            'gender'     => 'female',
+            'gender'     => fake()->randomElement(['male', 'female']),
             'address'    => fake()->address(),
             'contact_no' => fake()->randomElement(['09876543212', '09123456789']),
             'email'      => fake()->email(),

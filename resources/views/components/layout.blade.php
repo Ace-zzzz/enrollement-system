@@ -10,7 +10,7 @@
                 <h3 class="mt-4 text-2xl text-blue-600 "> Muntinlupa NHS </h3>
             </div>
 
-            <div class="mt-20 flex flex-col space-y-10">
+            <div class="mt-20 flex text-green flex-col space-y-10">
                 <x-nav-link href="/" :active="request()->is('/')"> Dashboard </x-nav-link>
                 <x-nav-link href="{{ route('newEnrollees')  }}" :active="request()->is('new-enrollees')"> New Enrollees </x-nav-link>
                 <x-nav-link href="{{ route('student.index') }}" :active="request()->is('students')"> Students </x-nav-link>
@@ -25,7 +25,7 @@
     {{-- end of side bar --}}
     
     {{-- main --}}
-        <main class="border border-black shadow-gray-700 shadow-lg w-4/5 flex flex-col bg-lightGreen rounded-3xl text-black px-4">
+        <main class="border border-black shadow-gray-700 shadow-lg w-[1216px] h-[774px] flex flex-col bg-green rounded-3xl text-black px-4">
             {{ $slot }}
         </main>
     {{-- End of main--}}

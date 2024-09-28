@@ -12,8 +12,16 @@ class StudentController
         FETCH STUDENTS WHOSE ENROLLED STATUS IS TRUE
         IN ALPHABETICAL ORDER OF THEIR LAST NAME AND PAGINATE THEM BY 6
     */
-    public function index()
+    public function index(Request $request)
     {
+        if($request->has('search'))
+        {
+            $students = Student::search($request->search)->where('enrolled', true)->orderBy('last_name')->simplePaginate(6);
+            $students->load('section');
+            
+            return view('students.index', ['students' => $students]);
+        }
+
         $enrolled  = Student::with('section')->where('enrolled', true)->orderBy('last_name')->simplePaginate(6);
         return view('students.index', ['students' => $enrolled]);
     }

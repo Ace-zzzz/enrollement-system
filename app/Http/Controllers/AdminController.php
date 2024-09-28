@@ -19,6 +19,8 @@ class AdminController
             'enrollees' => Student::where('enrolled', false)->get(),
             'teachers'  => Teacher::all(),
             'sections'  => Section::all(),
+            'male'      => Student::where(['enrolled' => true, 'gender' => 'male']),
+            'female'    => Student::where(['enrolled' => true, 'gender' => 'female']),
         ]);
     }
 

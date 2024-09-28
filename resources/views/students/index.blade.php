@@ -5,7 +5,11 @@
       class="ml-10 mt-4 w-32 p-2 border border-black rounded-lg font-semibold bg-orangeYellow"> 
       Add Student 
     </a>
-
+    
+    <form action="{{ route('student.index') }}" method="GET">
+        <input name="search">
+        <button> Submit </button>
+    </form>
     @if ($students->count() == 0)
         <x-empty> NO STUDENTS </x-empty>
     @else

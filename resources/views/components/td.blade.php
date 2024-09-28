@@ -23,9 +23,9 @@
             @csrf
             @method('PATCH')
             <x-button class="bg-blue-600"> Accept </x-button>
-            <x-button class="bg-red-500"> Deny </x-button>
+            <x-button form="deny-form" class="bg-red-500"> Deny </x-button>
         </form>
-        <form id="delete-form" action="{{ route('student.deny', ['student' => $enrollee->LRN]) }}" method="POST" class="hidden">
+        <form id="deny-form" action="{{ route('student.deny', ['student' => $enrollee->LRN]) }}" method="POST" class="hidden">
             @csrf
             @method('DELETE')
         </form>

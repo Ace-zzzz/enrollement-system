@@ -1,7 +1,7 @@
 <x-layout>
     <x-header> New Enrollees </x-header>
 
-    @if($enrollees->count() == 0)
+    @if(($enrollees->count() == 0))
         <x-empty> NO ENROLLEES </x-empty>
     @else
       <div class="overflow-x-auto p-2">
