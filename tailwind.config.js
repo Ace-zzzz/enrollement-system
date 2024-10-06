@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         'green' : '#337F3A',
+        'lightGreen' : '#07BD19',
       }
     },
   },
